@@ -1,0 +1,163 @@
+.slidernews
+  width: 100%
+
+  &__container
+    margin-bottom: 50px
+
+  &__picture
+    position: relative
+    padding-bottom: 39%
+
+    @media only screen and (max-width: 1199px)
+      padding-bottom: 50%
+
+    @media only screen and (max-width: 767px)
+      padding-bottom: 70%
+
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba($dark,.6)
+      z-index: 1
+
+    & > img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+
+  &__wrapper
+    box-sizing: border-box
+    position: absolute
+    display: flex
+    align-items: center
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    color: $light
+    padding: 10px 100px
+
+    @media only screen and (max-width: 767px)
+      padding: 10px 50px
+
+  &__text
+    position: relative
+    z-index: 1
+    max-width: 580px
+
+    & > h2
+      font-size: 60px
+      line-height: 1
+      margin-bottom: 30px
+      opacity: 0
+      transform: translateY(50px)
+
+      @media only screen and (max-width: 1680px)
+        font-size: 50px
+        margin-bottom: 25px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 40px
+
+      @media only screen and (max-width: 460px)
+        font-size: 20px
+
+    & > p
+      font-size: 24px
+      margin-bottom: 50px
+      opacity: 0
+      transform: translateY(50px)
+
+      @media only screen and (max-width: 1680px)
+        font-size: 20px
+        margin-bottom: 45px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 18px
+
+      @media only screen and (max-width: 767px)
+        display: none
+
+    & > .btn
+      opacity: 0
+      transform: translateY(50px)
+
+  & .swiper-slide.swiper-slide-active,
+  & .swiper-slide.swiper-slide-duplicate-active
+    & .slidernews__text > h2
+      opacity: 1
+      transform: translateY(0)
+      transition: opacity .3s ease-out .6s, transform .3s ease-out .6s
+
+    & .slidernews__text > p
+      opacity: 1
+      transform: translateY(0)
+      transition: opacity .3s ease-out .9s, transform .3s ease-out .9s
+
+    & .slidernews__text > .btn
+      opacity: 1
+      transform: translateY(0)
+      transition: opacity .3s ease-out 1.2s, transform .3s ease-out 1.2s
+
+  &__right,
+  &__left
+    cursor: pointer
+    position: absolute
+    top: calc(50% - 15px)
+    width: 30px
+    height: 30px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    opacity: .8
+    transition: opacity .3s ease-out
+    z-index: 1
+
+    &:hover
+      opacity: 1
+
+  &__left
+    left: 35px
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.35,24H8.65C2.59,24,0,21.41,0,15.35V8.65C0,2.59,2.59,0,8.65,0h6.7C21.41,0,24,2.59,24,8.65v6.7C24,21.41,21.41,24,15.35,24ZM8.65,1.67c-5.15,0-7,1.83-7,7v6.7c0,5.15,1.83,7,7,7h6.7c5.15,0,7-1.83,7-7V8.65c0-5.15-1.83-7-7-7ZM14,16.53a.83.83,0,0,0,0-1.18L10.66,12,14,8.65a.83.83,0,0,0,0-1.18.84.84,0,0,0-1.19,0L8.88,11.41a.85.85,0,0,0,0,1.18l3.93,3.94a.83.83,0,0,0,1.19,0Z' fill='%23f8f9fa'/%3E%3C/svg%3E")
+
+    @media only screen and (max-width: 767px)
+      left: 10px
+
+  &__right
+    right: 35px
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.35,24H8.65C2.59,24,0,21.41,0,15.35V8.65C0,2.59,2.59,0,8.65,0h6.7C21.41,0,24,2.59,24,8.65v6.7C24,21.41,21.41,24,15.35,24ZM8.65,1.67c-5.15,0-7,1.83-7,7v6.7c0,5.15,1.83,7,7,7h6.7c5.15,0,7-1.83,7-7V8.65c0-5.15-1.83-7-7-7Zm2.54,14.86,3.93-3.94a.85.85,0,0,0,0-1.18L11.19,7.47A.84.84,0,1,0,10,8.65L13.34,12,10,15.35a.84.84,0,0,0,0,1.18.83.83,0,0,0,1.19,0Z' fill='%23f9f8fa'/%3E%3C/svg%3E")
+
+    @media only screen and (max-width: 767px)
+      right: 10px
+
+  &__pagination
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    right: 0
+    left: 0
+    bottom: 10px
+    z-index: 1
+
+    & > .swiper-pagination-bullet
+      display: block
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      border: 2px solid $light
+      margin-left: 3px
+      margin-right: 3px
+      transition: background-color .3s ease-out
+
+      &-active
+        background: $gold

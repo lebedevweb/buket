@@ -1,0 +1,145 @@
+.sidenav
+  position: fixed
+  //display: none
+  box-sizing: border-box
+  left: -320px
+  top: 0
+  width: 320px
+  height: 100vh
+  background-color: lighten($grey80, 15)
+  padding-top: 90px
+  padding-bottom: 70px
+
+  z-index: 800
+  overflow-y: auto
+  transition: ease-in left .5s
+
+  @media only screen and (max-width: 1199px)
+    display: block
+
+  &.active
+    left: 0
+
+  &_social
+    display: flex
+    list-style: none
+    justify-content: space-evenly
+    margin-bottom: 20px
+
+    &-icon
+      width: 30px
+      fill: $light
+
+  &_menu
+    text-transform: uppercase
+    margin-bottom: 20px
+
+    &-arrow
+      position: absolute
+      display: block
+      content: ''
+      top: 0
+      right: 0
+      height: 43px
+      width: 43px
+      cursor: pointer
+      //background-color: $grey60
+
+      &::before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        background-size: 25px
+        background-position: center
+        background-repeat: no-repeat
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.35,24H8.65C2.59,24,0,21.41,0,15.35V8.65C0,2.59,2.59,0,8.65,0h6.7C21.41,0,24,2.59,24,8.65v6.7C24,21.41,21.41,24,15.35,24ZM8.65,1.67c-5.15,0-7,1.83-7,7v6.7c0,5.15,1.83,7,7,7h6.7c5.15,0,7-1.83,7-7V8.65c0-5.15-1.83-7-7-7Zm2.54,14.86,3.93-3.94a.85.85,0,0,0,0-1.18L11.19,7.47A.84.84,0,1,0,10,8.65L13.34,12,10,15.35a.84.84,0,0,0,0,1.18.83.83,0,0,0,1.19,0Z' style='fill:%23222222'/%3E%3C/svg%3E")
+        transition: .5s ease-out
+
+      &.active
+        &::before
+          transform: rotate(90deg)
+
+    & .menu-item-has-children
+      position: relative
+
+      &::before
+        position: absolute
+        display: block
+        content: ''
+        top: 0
+        right: 0
+        height: 45px
+        width: 44px
+        border-left: solid 1px transparent
+
+    & > li
+      color: $dark
+      //border-bottom: solid 1px #484040
+      //border-top: solid 1px #776e6e
+      border-top: 1px solid lighten($grey80, 20)
+      border-bottom: 1px solid darken($grey80, 0)
+
+      & a
+        display: block
+        color: inherit
+        font-size: 16px
+        line-height: 1.5
+        text-decoration: none
+        padding: 10px 45px 10px 15px
+
+      & > .sub-menu
+        max-height: 0
+        overflow: hidden
+        background-color: darken($grey90, 5)
+        transition: max-height .5s
+
+        & > li
+          align-items: center
+          border-top: 1px solid lighten($grey80, 15)
+          border-bottom: 1px solid darken($grey80, 5)
+
+
+          &:last-child
+            border-bottom: none
+
+          & > a
+            display: block
+            text-transform: lowercase
+            padding: 10px 45px 10px 15px
+
+
+            &:first-letter
+              text-transform: uppercase
+
+          & > .sub-menu
+            max-height: 0
+            overflow: hidden
+            background-color: darken($grey90, 10)
+            transition: max-height .5s
+
+            & > li
+              display: flex
+              align-items: center
+              border-top: 1px solid lighten($grey80, 10)
+              border-bottom: 1px solid darken($grey80, 10)
+              padding-right: 15px
+
+              &::before
+                content: '-'
+                margin-left: 15px
+
+              &:last-child
+                border-bottom: none
+
+              & > a
+                display: block
+                text-transform: lowercase
+                padding: 10px 45px 10px 15px
+
+
+                &:first-letter
+                  text-transform: uppercase
+
+.sidenav_menu-arrow.active ~ .sub-menu
+  max-height: 500px!important

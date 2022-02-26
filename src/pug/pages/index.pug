@@ -1,0 +1,32 @@
+doctype html
+html(lang="ru")
+  include ../common/head
+  body
+    include ../components/navbar
+    include ../components/sidenav
+    div(class="wrapper")
+      include ../components/header
+      div(class="wrapper__content")
+        section(class="slidernews__container")
+          div(class="container")
+            include ../components/slidernews
+        section(class="maingoods__container")
+          div(class="container")
+            include ../components/maingoods
+
+        section(class="allgoods__container")
+          div(class="container")
+            include ../components/allgoods
+        section(class="allgoods__container")
+          div(class="container")
+            include ../components/allgoods
+        section(class="allgoods__container")
+          div(class="container")
+            include ../components/allgoods
+
+      include ../components/footer
+    include ../components/scrolltop
+    include ../components/popup
+
+    script(src="./js/main.js" async)
+

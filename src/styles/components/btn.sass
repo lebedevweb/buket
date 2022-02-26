@@ -1,0 +1,55 @@
+.btn
+  box-sizing: border-box
+  position: relative
+  display: inline-flex
+  font-weight: 300
+  text-align: center
+  text-decoration: none
+  border: none
+  background-color: transparent
+  transition:
+    property: color, background-color, border, opacity, transform
+    timing-function: ease-out
+    duration: .4s
+  cursor: pointer
+
+  &__gold
+    color: $dark
+    background: $gradient
+    border-radius: 5px
+    padding: 10px 25px
+
+    &:hover
+      opacity: .7
+
+  &__outline
+    color: $dark
+    border: 1px solid $dark
+    padding: 7px 15px
+
+    &:hover
+      color: $light
+      background-color: $dark
+
+  &__tocart
+    display: flex
+    align-items: center
+    color: $light
+    background: $dark
+    border-radius: 5px
+    padding: 10px 15px
+
+    &::after
+      content: ''
+      display: block
+      width: 18px
+      height: 18px
+      margin-left: 10px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.81,24H8.19C2.45,24,0,21.6,0,16v-.15C0,10.77,2,8.32,6.63,7.9a.86.86,0,1,1,.16,1.71c-3.67.33-5,2-5,6.23V16c0,4.65,1.69,6.3,6.44,6.3h7.62c4.75,0,6.44-1.65,6.44-6.3v-.15c0-4.24-1.39-5.93-5.13-6.24a.86.86,0,1,1,.15-1.71c4.66.39,6.73,2.84,6.73,8V16C24,21.6,21.55,24,15.81,24Zm.73-11.58a.9.9,0,0,0-1.24,0l-2.42,2.37V.86a.88.88,0,0,0-1.75,0V14.79L8.71,12.42a.9.9,0,0,0-1.24,0,.85.85,0,0,0,0,1.21l3.92,3.83a.87.87,0,0,0,.62.25.9.9,0,0,0,.62-.25l3.91-3.83A.85.85,0,0,0,16.54,12.42Z' style='fill:%23f8f9fa'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+
+
+    &:hover
+      opacity: .7

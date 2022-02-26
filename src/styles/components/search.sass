@@ -1,0 +1,38 @@
+.search
+  &__form
+    position: relative
+
+  &__input
+    display: block
+    border: 1px solid $grey90
+    border-radius: 5px
+    padding: 10px 40px 10px 20px
+    transition: border .3s ease-out, box-shadow .3s ease-out
+
+    &:focus
+      box-shadow: 0 0 10px $grey80
+      border: 1px solid $grey80
+
+      &::placeholder
+        color: transparent
+
+  &__button
+    position: absolute
+    display: flex
+    align-items: center
+    top: 0
+    right: 0
+    width: 40px
+    height: 100%
+    padding: 10px
+
+    & > svg
+      width: 98%
+      height: auto
+      fill: $grey50
+      transition: fill .3s ease
+
+    &:hover
+      & > svg
+        fill: $dark
+

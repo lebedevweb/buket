@@ -1,0 +1,281 @@
+.allgoods
+  box-sizing: border-box
+  position: relative
+  width: 24%
+  //box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25)
+  border: 1px solid darken($grey90, 5)
+  margin-right: 1.33%
+  margin-bottom: 20px
+
+  &:nth-child(4n+4)
+    margin-right: 0
+
+  @media only screen and (max-width: 1199px)
+    width: 32%
+    margin-right: 2%
+
+    &:nth-child(4n+4)
+      margin-right: 2%
+
+    &:nth-child(3n+3)
+      margin-right: 0
+
+  @media only screen and (max-width: 899px)
+    width: 48%
+    margin-right: 4%
+
+    &:nth-child(4n+4)
+      margin-right: 0
+
+    &:nth-child(3n+3)
+      margin-right: 4%
+
+    &:nth-child(2n+2)
+      margin-right: 0
+
+  @media only screen and (max-width: 599px)
+    width: 100%
+    margin-right: 0
+
+    &:nth-child(3n+3)
+      margin-right: 0
+
+
+  &:hover .allgoods__picture > img
+    transform: scale(1.2)
+
+  &:hover .allgoods__description
+    -webkit-line-clamp: none
+    height: 150px
+    //max-height: none
+    overflow-y: auto
+    animation: height .5s
+
+  &__container
+    margin-bottom: 50px
+
+  &__navigation
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+
+    @media only screen and (max-width: 768px)
+      display: block
+
+    &__wrapper
+      display: flex
+      align-items: center
+
+      @media only screen and (max-width: 768px)
+        margin-bottom: 20px
+
+      & > h2
+        font-size: 20px
+        font-weight: 500
+        text-transform: uppercase
+        margin-right: 20px
+
+        &:after
+          content: ':'
+
+        @media only screen and (max-width: 1680px)
+          font-size: 18px
+
+        @media only screen and (max-width: 1199px)
+          font-size: 16px
+
+    &__list
+      display: flex
+
+      @media only screen and (max-width: 768px)
+        display: none
+
+      & > li
+        display: block
+        font-size: 20px
+        font-weight: 300
+        font-family: $font-title
+
+        &:not(:last-child)
+          margin-right: 10px
+
+        @media only screen and (max-width: 1680px)
+          font-size: 18px
+
+        @media only screen and (max-width: 1199px)
+          font-size: 16px
+
+        & > a
+          color: inherit
+          text-decoration-color: transparent
+          transition: text-decoration-color .3s ease-out
+
+          &:hover
+            text-decoration-color: inherit
+
+
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 20px
+
+  &__picture
+    position: relative
+    display: block
+    padding-top: 60%
+    overflow: hidden
+
+    & > img
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+      transition: transform .3s ease-out
+
+    &:hover > img
+      transform: scale(1.2)
+
+  &__hidden
+    height: 225px
+
+    @media only screen and (max-width: 767px)
+      display: none
+
+  &__content
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    min-height: 225px
+    border-radius: 5px 5px 0 0
+    padding: 20px
+    background-color: $light
+    z-index: 1
+
+
+    @media only screen and (max-width: 767px)
+      position: relative
+      min-height: auto
+
+  &__header
+    padding: 20px 20px 12px 20px
+    font-size: 18px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 16px
+
+  &__title
+    margin-bottom: 15px
+    font-weight: 500
+
+    & > a
+      color: inherit
+      text-decoration-color: $light
+      margin-right: 10px
+      transition: text-decoration-color ease-out .3s
+
+      &:hover
+        text-decoration-color: $dark
+
+
+  &__size
+    color: rgba($dark,.5)
+    margin-bottom: 10px
+
+    &::before
+      content: ''
+      display: inline-block
+      width: 18px
+      height: 18px
+      margin-right: 10px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.35,24H8.65C2.59,24,0,21.41,0,15.35V8.65C0,2.59,2.59,0,8.65,0h6.7C21.41,0,24,2.59,24,8.65v6.7C24,21.41,21.41,24,15.35,24ZM8.65,1.67c-5.15,0-7,1.83-7,7v6.7c0,5.15,1.83,7,7,7h6.7c5.15,0,7-1.83,7-7V8.65c0-5.15-1.83-7-7-7Zm8.72,5.2-3.57-2a4,4,0,0,0-3.6,0l-3.56,2a4,4,0,0,0-1.91,3.23V13.9a4,4,0,0,0,1.91,3.23l3.57,2a3.78,3.78,0,0,0,1.79.42,3.82,3.82,0,0,0,1.8-.42l3.57-2a4,4,0,0,0,1.91-3.23V10.1A4,4,0,0,0,17.37,6.87ZM11,6.36h0a2.15,2.15,0,0,1,1-.22,2,2,0,0,1,1,.22l3.58,2a1.58,1.58,0,0,1,.3.24L12,11.4,7.15,8.59a2.21,2.21,0,0,1,.3-.25Zm-3.57,9.3a2.29,2.29,0,0,1-1-1.76V10.11h0l4.75,2.75V17.7s-.1,0-.14-.05ZM17.6,13.9a2.34,2.34,0,0,1-1,1.77l-3.57,2a.67.67,0,0,1-.15.06V12.85l4.76-2.76h0Z' style='fill:%23222'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+
+    & > span
+      font-family: $font-title
+      font-weight: 500
+
+  &__description
+    color: rgba($dark,.5)
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow-y: hidden
+    height: 59px
+    transition: height ease-out .3s
+
+    &:first-letter
+      color: gold
+
+    &::before
+      content: ''
+      display: inline-block
+      width: 18px
+      height: 18px
+      margin-right: 10px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M22.81,8.35a6.71,6.71,0,0,0-4.18-1.58V5.86a5.57,5.57,0,0,0-2.18-4.34A7.12,7.12,0,0,0,11.36,0c-3.25.27-6,3-6,6.05v.69A6.71,6.71,0,0,0,1.19,8.35,4.74,4.74,0,0,0,.07,12.58L1,19.26C1.3,21.61,2.37,24,8.21,24h7.58c5.84,0,6.91-2.39,7.19-4.72l.95-6.71A4.72,4.72,0,0,0,22.81,8.35ZM11.54,1.7a5.07,5.07,0,0,1,3.64,1.06,4,4,0,0,1,1.56,3.1v.83H7.26V6.08A4.72,4.72,0,0,1,11.54,1.7ZM22.05,12.37l-.95,6.72c-.21,1.77-.76,3.23-5.31,3.23H8.21c-4.55,0-5.1-1.46-5.31-3.25L2,12.38A3.27,3.27,0,0,1,2.6,9.47c.74-.73,2.2-1.1,4.35-1.1h10.1c2.14,0,3.61.37,4.35,1.1A3.26,3.26,0,0,1,22.05,12.37Zm-5.62.74A1.2,1.2,0,0,1,15.16,12a1.19,1.19,0,0,1,1.26-1.12h0A1.19,1.19,0,0,1,17.69,12,1.19,1.19,0,0,1,16.43,13.11Zm-8.85,0A1.2,1.2,0,0,1,6.31,12a1.19,1.19,0,0,1,1.26-1.12h0A1.2,1.2,0,0,1,8.85,12,1.2,1.2,0,0,1,7.58,13.11Z' style='fill:%23222'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+
+
+    @media only screen and (max-width: 767px)
+      position: absolute
+      width: 1px
+      height: 1px
+      padding: 0
+      overflow: hidden
+      clip: rect(0,0,0,0)
+      white-space: nowrap
+      clip-path: inset(50%)
+      border: 0
+
+  &__footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 15px 0 15px 0
+
+
+  &__price
+    font-family: $font-title
+    font-size: 20px
+    font-weight: 700
+
+    @media only screen and (max-width: 1680px)
+      font-size: 18px
+
+    &::after
+      content: '\20BD'
+
+  &__badge
+    position: absolute
+    top: 0
+    left: 0
+    padding: 5px 15px
+
+    &.hot
+      color: $light
+      background-color: #EE204D
+
+    &.exclusive
+      color: $light
+      background-color: #423189
+
+    &.new
+      color: $light
+      background-color: #1E5945
+
+  &__button
+    text-align: center

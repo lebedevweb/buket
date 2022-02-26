@@ -1,0 +1,40 @@
+.header__navigation__list
+  & > li
+    & > .sub-menu
+      box-sizing: border-box
+      position: absolute
+      display: none
+      justify-content: space-between
+      left: 0
+      top: 50px
+      width: 100%
+      background-color: $light
+      border: 1px solid $grey90
+      box-shadow: 0 2px 4px #e9e9e9
+      z-index: 500
+
+      & > li
+        display: block
+        padding: 40px 20px
+
+        & > a
+          cursor: default
+          color: $darkgold
+          font-family: $font-title
+          //font-weight: 700
+          text-transform: uppercase
+          letter-spacing: 1px
+          margin-bottom: 20px
+
+        & > .sub-menu
+          & > li
+            &:not(:last-child)
+              margin-bottom: 10px
+
+            & > a:hover
+              color: $darkgold
+              text-decoration-color: inherit
+
+
+  & > li:hover > .sub-menu
+    display: flex
