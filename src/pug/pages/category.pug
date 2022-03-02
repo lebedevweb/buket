@@ -1,0 +1,45 @@
+doctype html
+html(lang="ru")
+  include ../common/head
+  body
+    include ../components/navbar
+    include ../components/sidenav
+    div(class="wrapper")
+      header(class="header")
+        div(class="container")
+          include ../components/header/header-top
+          include ../components/header/header-navigation
+          include ../components/bradcrumbs
+
+      div(class="wrapper__content")
+        section(class="maingoods__container")
+          div(class="container")
+            include ../components/maingoods-simple
+
+        section(class="category")
+          div(class="container")
+            header(class="category__header")
+              h1(class="category__title") Мужские букеты
+              ul(class="category__list")
+                li
+                  a(href="#0") Букеты из раков
+                li
+                  a(href="#0") Букеты из колбасы
+                li
+                  a(href="#0") Букеты из с рыбой
+                li
+                  a(href="#0") Мясные букеты
+              div(id="filter") Вывести фильтр на товары по ценам
+
+
+            include ../components/allgoods-category
+      include ../components/special
+
+
+
+      include ../components/footer
+    include ../components/scrolltop
+    include ../components/popup
+
+    script(src="./js/main.js" async)
+

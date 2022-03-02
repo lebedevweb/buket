@@ -9,18 +9,12 @@
   &:nth-child(4n+4)
     margin-right: 0
 
-
   @media only screen and (max-width: 767px)
     width: 48%
     margin-right: 4%
 
     &:nth-child(2n+2)
       margin-right: 0
-
-
-
-
-
 
   &::before
     content: ''
@@ -40,6 +34,24 @@
     display: flex
     flex-wrap: wrap
 
+  &__simple
+    display: block
+    color: inherit
+    font-family: $font-title
+    font-weight: 300
+    border: 1px solid $grey80
+    border-radius: 5px
+    padding: 10px 20px
+    margin-bottom: 10px
+    background: transparent
+    transition: background .3s ease-out
+
+    &:not(:last-child)
+      margin-right: 20px
+
+    &:hover
+      background: $gradient
+
   &__picture
     position: relative
     padding-top: 56.25%
@@ -58,9 +70,6 @@
 
   &:hover .maingoods__image
     transform: scale(1.2)
-
-
-
 
   &__title
     box-sizing: border-box

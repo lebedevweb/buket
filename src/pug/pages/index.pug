@@ -5,7 +5,11 @@ html(lang="ru")
     include ../components/navbar
     include ../components/sidenav
     div(class="wrapper")
-      include ../components/header
+      header(class="header")
+        div(class="container")
+          include ../components/header/header-top
+          include ../components/header/header-navigation
+
       div(class="wrapper__content")
         section(class="slidernews__container")
           div(class="container")
