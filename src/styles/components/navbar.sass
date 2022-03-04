@@ -71,9 +71,18 @@
     @media only screen and (max-width: 1199px)
       display: none
 
+
     & > li
+
+      @media only screen and (max-width: 1680px)
+        font-size: 14px
+
       &:not(:last-child)
         margin-right: 10px
+
+        @media only screen and (max-width: 1680px)
+          margin-right: 5px
+
 
       & > a
         position: relative
@@ -81,6 +90,7 @@
         color: $dark
         text-decoration: none
         padding: 5px 10px
+
 
         &::before,
         &::after

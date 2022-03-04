@@ -1,0 +1,367 @@
+.product
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-bottom: 50px
+
+  &__images
+    width: 55%
+    margin-bottom: 50px
+
+    @media only screen and (max-width: 1199px)
+      width: 45%
+
+    @media only screen and (max-width: 767px)
+      width: 100%
+
+  &__slider
+    position: sticky
+    top: 71px
+    width: 100%
+
+    &__main,
+    &__nav
+      width: 100%
+
+      & img
+        position: absolute
+        display: block
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-position: center
+        object-fit: cover
+
+    &__main
+      margin-bottom: 10px
+
+      & .swiper-slide
+        padding-top: 56.25%
+
+    &__nav
+      & .swiper-slide
+        cursor: pointer
+        padding-top: 14%
+        opacity: .4
+        transition: opacity .3s ease-out
+
+      & .swiper-slide-thumb-active
+        opacity: 1
+
+    &__right,
+    &__left
+      cursor: pointer
+      position: absolute
+      top: calc(50% - 15px)
+      width: 30px
+      height: 30px
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      opacity: .8
+      transition: opacity .3s ease-out
+      z-index: 1
+
+      &:hover
+        opacity: 1
+
+    &__left
+      left: 35px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.35,24H8.65C2.59,24,0,21.41,0,15.35V8.65C0,2.59,2.59,0,8.65,0h6.7C21.41,0,24,2.59,24,8.65v6.7C24,21.41,21.41,24,15.35,24ZM8.65,1.67c-5.15,0-7,1.83-7,7v6.7c0,5.15,1.83,7,7,7h6.7c5.15,0,7-1.83,7-7V8.65c0-5.15-1.83-7-7-7ZM14,16.53a.83.83,0,0,0,0-1.18L10.66,12,14,8.65a.83.83,0,0,0,0-1.18.84.84,0,0,0-1.19,0L8.88,11.41a.85.85,0,0,0,0,1.18l3.93,3.94a.83.83,0,0,0,1.19,0Z' fill='%23f8f9fa'/%3E%3C/svg%3E")
+
+      @media only screen and (max-width: 1199px)
+        left: 10px
+
+    &__right
+      right: 35px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.35,24H8.65C2.59,24,0,21.41,0,15.35V8.65C0,2.59,2.59,0,8.65,0h6.7C21.41,0,24,2.59,24,8.65v6.7C24,21.41,21.41,24,15.35,24ZM8.65,1.67c-5.15,0-7,1.83-7,7v6.7c0,5.15,1.83,7,7,7h6.7c5.15,0,7-1.83,7-7V8.65c0-5.15-1.83-7-7-7Zm2.54,14.86,3.93-3.94a.85.85,0,0,0,0-1.18L11.19,7.47A.84.84,0,1,0,10,8.65L13.34,12,10,15.35a.84.84,0,0,0,0,1.18.83.83,0,0,0,1.19,0Z' fill='%23f9f8fa'/%3E%3C/svg%3E")
+
+      @media only screen and (max-width: 1199px)
+        right: 10px
+
+  &__content
+    width: 40%
+    margin-bottom: 50px
+
+    @media only screen and (max-width: 1199px)
+      width: 50%
+
+    @media only screen and (max-width: 767px)
+      width: 100%
+
+  &__title
+    font-size: 30px
+    font-weight: 500
+    margin-bottom: 20px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 24px
+
+    @media only screen and (max-width: 767px)
+      font-size: 20px
+
+
+
+  &__number
+    margin-bottom: 30px
+
+    & > h2,
+    & > p
+      display: inline-block
+      font-size: 18px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 16px
+
+    & > h2
+      font-weight: 500
+
+  &__price
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+
+    & > p
+      font-weight: 600
+      font-size: 24px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 20px
+
+      @media only screen and (max-width: 767px)
+        font-size: 18px
+
+      &::after
+        content: '\20BD'
+
+  &__structure
+    margin-bottom: 20px
+    font-size: 18px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 16px
+
+    & > h2
+      font-size: inherit
+      font-weight: 500
+      margin-bottom: 10px
+
+    & > p
+      line-height: 1.4
+
+
+  &__category
+    font-size: 18px
+    margin-bottom: 20px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 16px
+
+    & > h2
+      display: inline-block
+      font-size: inherit
+      font-weight: 500
+
+    & > p
+      display: inline-block
+
+      & > a
+        color: inherit
+
+
+  &__size
+    font-size: 18px
+    margin-bottom: 20px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 16px
+
+    & > h2
+      display: inline-block
+      font-size: inherit
+      font-weight: 500
+
+    & > p
+      display: inline-block
+
+  &__weight
+    font-size: 18px
+    margin-bottom: 20px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 16px
+
+    & > h2
+      display: inline-block
+      font-size: inherit
+      font-weight: 500
+
+    & > p
+      display: inline-block
+      font-size: inherit
+
+      &::after
+        content: 'кг'
+
+
+  &__time
+    font-size: 18px
+    margin-bottom: 20px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 16px
+
+    & > h2
+      display: inline-block
+      font-size: inherit
+      font-weight: 500
+
+    & > time
+      display: inline-block
+      font-size: inherit
+
+
+  &__tags
+    font-size: 18px
+    margin-bottom: 30px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 16px
+
+    & > h2
+      font-size: inherit
+      font-weight: 500
+      margin-bottom: 10px
+
+    &__list
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      list-style: none
+
+    &__item
+      display: block
+      border: 1px solid $grey80
+      border-radius: 5px
+      margin-right: 10px
+      margin-bottom: 10px
+      transition: border .4s ease-out, background-color .4s ease-out
+
+      & > a
+        display: block
+        color: inherit
+        font-size: inherit
+        text-decoration: none
+        text-transform: lowercase
+        padding: 5px 10px
+        transition: color .4s ease-out
+
+        &:first-letter
+          text-transform: uppercase
+
+      &:hover
+        border: 1px solid $dark
+        background-color: $dark
+
+        & > a
+          color: $light
+
+  &__guarantees
+    list-style: none
+
+    &__item
+      display: flex
+      align-items: center
+
+      &:not(:last-child)
+        margin-bottom: 20px
+
+      & > svg
+        width: 32px
+        min-width: 32px
+        margin-right: 20px
+
+      & > p
+        font-size: 18px
+
+        @media only screen and (max-width: 1199px)
+          font-size: 16px
+
+  &__description
+    width: 100%
+
+    & > h2
+      position: relative
+      cursor: pointer
+      font-size: 24px
+      border: 1px solid darken($grey90,5)
+      padding: 10px
+      transition: background-color .5s ease-out, color .5s ease-out
+
+      @media only screen and (max-width: 1199px)
+        font-size: 22px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 20px
+
+      @media only screen and (max-width: 1199px)
+        font-size: 18px
+
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        display: block
+        left: 0
+        height: 0
+        width: 100%
+        background-color: $dark
+        z-index: -1
+        transition: height .3s ease-out
+
+      &::before
+        top: 0
+
+      &::after
+        bottom: 0
+
+
+      &:hover,
+      &.active
+        background-color: $dark
+        color: $light
+
+        &::before,
+        &::after
+          height: 50%
+
+    & > div
+      box-sizing: border-box
+      border: 1px solid darken($grey90,5)
+      border-top: 0
+      max-height: 0
+      padding: 0 10px
+      margin-top: -1px
+      overflow: hidden
+      transition: max-height .3s ease-out, padding .6s ease-out
+
+      &.active
+        max-height: 3000px
+        padding: 15px 10px
+
+      & > *
+        line-height: 1.4
+        margin-bottom: 10px
+
+      & > p
+        font-size: 18px
+
+        @media only screen and (max-width: 1199px)
+          font-size: 16px
+
+        @media only screen and (max-width: 767px)
+          font-size: 14px
+
+
