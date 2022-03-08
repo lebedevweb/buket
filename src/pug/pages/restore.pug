@@ -1,0 +1,39 @@
+doctype html
+html(lang="ru")
+  include ../common/head
+  body
+    include ../components/navbar
+    include ../components/sidenav
+    div(class="wrapper")
+      header(class="header")
+        div(class="container")
+          include ../components/header/header-top
+          include ../components/header/header-navigation
+
+      div(class="wrapper__content")
+        div(class="container")
+          main(class="login")
+            div(class="login__container")
+              h1(class="login__title") Восстановление пароля
+              form(method="post" class="login__form")
+
+                div(class="login__block")
+                  p(class="login__description") Забыли свой пароль? Укажите свой Email или имя пользователя. Ссылку на создание нового пароля вы получите по электронной почте.
+                div(class="login__block")
+                  label(class="login__label" for="user_login") Имя пользователя или Email
+                  input(class="login__input" type="text" name="user_login" id="user_login" autocomplete="username")
+                div(class="login__block")
+                  input(type="hidden" name="wc_reset_password" value="true")
+                  button(type="submit" class="btn btn__outline" value="Сброс пароля") Сброс пароля
+
+                input(type="hidden" id="woocommerce-lost-password-nonce" name="woocommerce-lost-password-nonce" value="f4e5065b0e")
+                input(type="hidden" name="_wp_http_referer" value="/my-account/lost-password/")
+
+
+
+      include ../components/footer
+    include ../components/scrolltop
+    include ../components/popup
+
+    script(src="./js/main.js" async)
+

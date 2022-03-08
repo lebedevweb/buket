@@ -1,6 +1,6 @@
 export default function sidenav() {
-  const spanArrow = '<span class="sidenav_menu-arrow"></span>';
-  const mobileMenu = document.getElementById('mobile_menu');
+  const spanArrow = '<span class="sidenav__menu-arrow"></span>';
+  const mobileMenu = document.getElementById('mobile__menu');
   const liDropdown = mobileMenu.querySelectorAll('.menu-item-has-children');
   // console.log(liDropdown);
 
@@ -12,7 +12,7 @@ export default function sidenav() {
 
   (function arrowRotate() {
     // eslint-disable-next-line no-shadow
-    const spanArrow = document.querySelectorAll('.sidenav_menu-arrow');
+    const spanArrow = document.querySelectorAll('.sidenav__menu-arrow');
 
     // eslint-disable-next-line no-restricted-syntax
     for (const spanArrowElement of spanArrow) {

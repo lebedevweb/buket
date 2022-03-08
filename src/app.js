@@ -6,6 +6,7 @@ import burger from './js/burger/burger';
 import sidenav from './js/sidenav/sidenav';
 import deliveryDate from './js/deliveryDate/deliveryDate';
 import productDescription from './js/productDescription/productDescription';
+import loginTabs from './js/loginTabs/loginTabs';
 
 pushHeaderNav();
 nolink();
@@ -15,3 +16,4 @@ burger();
 sidenav();
 deliveryDate();
 productDescription();
+loginTabs();

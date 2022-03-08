@@ -1,5 +1,5 @@
 nav(class="sidenav")
-  ul(id="mobile_menu" class="sidenav_menu")
+  ul(id="mobile__menu" class="sidenav__menu")
     li(class="menu-item-has-children")
       a(href="#0") Мужские букеты
       ul(class="sub-menu")
@@ -189,3 +189,19 @@ nav(class="sidenav")
     li
       a(href="#0") Праздник
 
+  div(class="search")
+    form(class="search__form")
+      label(class="sr-only") Поиск товара
+      input(class="search__input" type="search" value="" placeholder="Поиск товара")
+      button(class="btn search__button")
+        span(class="sr-only") Искать
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+          path(d="M11.44,22.88A11.44,11.44,0,1,1,22.88,11.44,11.45,11.45,0,0,1,11.44,22.88Zm0-21.21a9.77,9.77,0,1,0,9.77,9.77A9.79,9.79,0,0,0,11.44,1.67ZM23.75,23.75a.83.83,0,0,0,0-1.18l-2.23-2.23a.83.83,0,0,0-1.18,1.18l2.23,2.23a.81.81,0,0,0,.59.25A.79.79,0,0,0,23.75,23.75Z")
+
+  ul(class="sidenav__nav")
+    li
+      a(href="#0") О себе
+    li
+      a(href="#0") Доставка и оплата
+    li
+      a(href="#0") Контакты

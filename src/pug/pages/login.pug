@@ -1,0 +1,68 @@
+doctype html
+html(lang="ru")
+  include ../common/head
+  body
+    include ../components/navbar
+    include ../components/sidenav
+    div(class="wrapper")
+      header(class="header")
+        div(class="container")
+          include ../components/header/header-top
+          include ../components/header/header-navigation
+
+      div(class="wrapper__content")
+        div(class="container")
+          main(class="login")
+            div(class="login__container")
+              h1(class="login__title") Личный кабинет
+              header(class="login__header")
+                h2(class="login__tab active") Вход
+                h2(class="login__tab") Регистрация
+              div(class="login__content active")
+                form(class="login__form active" method="post")
+                  div(class="login__block")
+                    label(class="login__label" for="username") Имя пользователя или Email:
+                    input(class="login__input" type="text" name="username" id="username" autocomplete="username" value="")
+                  div(class="login__block")
+                    label(class="login__label" for="password") Пароль:
+                    input(class="login__input" type="password" name="password" id="password" autocomplete="current-password")
+
+                  div(class="login__block login__row")
+                    div(class="login__check")
+                      input(name="rememberme" type="checkbox" id="rememberme" value="forever")
+                      label(for="rememberme") Запомнить меня
+                    input(type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="79265a30fa")
+                    input(type="hidden" name="_wp_http_referer" value="/my-account/")
+                    button(type="submit" class="btn btn__outline" name="login" value="Войти") Войти
+                  div(class="login__forgot")
+                    a(href="https://buket.lebedev-web.ru/my-account/lost-password/") Забыли свой пароль?
+
+
+
+              div(class="login__content")
+                form(method="post" class="login__form")
+
+                  div(class="login__block")
+                    label(class="login__label" for="reg_email") Email
+                    input(type="email" class="login__input" name="email" id="reg_email" autocomplete="email" value="")
+
+
+                  div(class="login__block")
+                    p Ссылка для установки нового пароля будет отправлена на ваш адрес электронной почты.
+
+
+                  div(class="login__block")
+                    p Вывод текста из поля WOOCOMMERCE > Настройки Аккаунты и приватность > Политика конфиденциальности при регистрации.
+
+                  div(class="login__row")
+                    input(type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="d3d56360ae")
+                    input(type="hidden" name="_wp_http_referer" value="/my-account/")
+                    button(type="submit" class="btn btn__outline" name="register" value="Регистрация") Регистрация
+
+
+      include ../components/footer
+    include ../components/scrolltop
+    include ../components/popup
+
+    script(src="./js/main.js" async)
+

@@ -1,0 +1,133 @@
+.login
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-top: 50px
+  padding-bottom: 50px
+
+  &__container
+    box-sizing: border-box
+    width: 100%
+    max-width: 320px
+    background-color: #fff
+    border-radius: 5px
+    box-shadow: 0 0 10px $grey80
+    padding: 20px
+
+  &__title
+    font-size: 24px
+    margin-bottom: 20px
+    text-align: center
+
+    @media only screen and (max-width: 767px)
+      font-size: 20px
+
+  &__header
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+
+  &__tab
+    cursor: pointer
+    display: block
+    font-size: 16px
+    text-decoration: underline
+
+    &.active
+      cursor: default
+      text-decoration-color: transparent
+
+  &__content
+    display: none
+
+    &.active
+      display: block
+
+  &__block
+    margin-bottom: 20px
+
+    & > p
+      font-size: 14px
+      color: $grey50
+
+      & > a
+        color: inherit
+
+
+  &__label
+    display: block
+    text-align: center
+    font-size: 14px
+    margin-bottom: 10px
+
+  &__input
+    display: block
+    box-sizing: border-box
+    width: 100%
+    border: 1px solid $grey90
+    border-radius: 5px
+    padding: 10px 40px 10px 20px
+    transition: border .3s ease-out, box-shadow .3s ease-out
+
+    &:focus
+      box-shadow: 0 0 10px $grey80
+      border: 1px solid $grey80
+
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__check
+    font-size: 14px
+
+    & > label
+      position: relative
+      display: block
+      padding-left: 25px
+
+      &::before
+        box-sizing: border-box
+        content: ''
+        position: absolute
+        display: block
+        left: 0
+        top: 0
+        width: 16px
+        height: 16px
+        border: 2px solid $dark
+        border-radius: 3px
+        transition: background-color .5s linear
+
+      &::after
+        content: ''
+        position: absolute
+        display: block
+        left: 0
+        top: 0
+        width: 16px
+        height: 16px
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11,24a.51.51,0,0,1-.39-.19L.14,11a.65.65,0,0,1,0-.84A.5.5,0,0,1,.53,10h5a.51.51,0,0,1,.4.2l3.48,4.55a23.62,23.62,0,0,1,2.39-4.28A36.83,36.83,0,0,1,23.23.07a.5.5,0,0,1,.71.25.65.65,0,0,1-.14.75,36.59,36.59,0,0,0-5,5.89,46.13,46.13,0,0,0-7.33,16.59A.55.55,0,0,1,11,24Z' style='fill:%23f8f9fa'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 12px
+        opacity: 0
+        transition: opacity .5s ease-out
+
+
+    & > input
+      display: none
+
+      &:checked + label
+        &::before
+          background-color: $dark
+
+        &::after
+          opacity: 1
+
+  &__forgot
+    font-size: 14px
+    color: $grey50
+
+    & > a
+      color: inherit

@@ -30,9 +30,9 @@
       width: 30px
       fill: $light
 
-  &_menu
+  &__menu
     text-transform: uppercase
-    margin-bottom: 20px
+    margin-bottom: 30px
 
     &-arrow
       position: absolute
@@ -141,5 +141,24 @@
                 &:first-letter
                   text-transform: uppercase
 
-.sidenav_menu-arrow.active ~ .sub-menu
+  &__nav
+    list-style: none
+    padding-left: 20px
+    padding-right: 20px
+    margin-bottom: 30px
+
+    & > li
+      display: block
+      color: $grey50
+
+      & > a
+        display: block
+        color: inherit
+        text-decoration: none
+        padding-top: 10px
+        padding-bottom: 10px
+
+
+
+.sidenav__menu-arrow.active ~ .sub-menu
   max-height: 500px!important
