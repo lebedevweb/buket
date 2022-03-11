@@ -4,7 +4,7 @@
   "description": "Bundler webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --devtool eval-source-map --mode development",
+    "start": "webpack serve --devtool source-map --mode development",
     "build": "webpack --mode production",
     "lint": "eslint .",
     "lintfix": "eslint . --fix",

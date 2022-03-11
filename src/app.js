@@ -7,6 +7,7 @@ import sidenav from './js/sidenav/sidenav';
 import deliveryDate from './js/deliveryDate/deliveryDate';
 import productDescription from './js/productDescription/productDescription';
 import loginTabs from './js/loginTabs/loginTabs';
+import addClassWoocommerce from './js/addClassWoocommerce/addClassWoocommerce';
 
 pushHeaderNav();
 nolink();
@@ -17,3 +18,4 @@ sidenav();
 deliveryDate();
 productDescription();
 loginTabs();
+addClassWoocommerce();

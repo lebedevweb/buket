@@ -1,0 +1,126 @@
+.page
+  padding-top: 50px
+  padding-bottom: 50px
+
+  &__title
+    position: relative
+    font-size: 35px
+    margin-bottom: 50px
+    padding-left: 20px
+
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      width: 5px
+      height: 100%
+      background-color: $gold
+
+    @media only screen and (max-width: 1680px)
+      font-size: 30px
+
+    @media only screen and (max-width: 1199px)
+      font-size: 25px
+
+    @media only screen and (max-width: 767px)
+      font-size: 20px
+
+  & a
+    color: darken($gold,20)
+    transition: color .4s ease
+
+    &:hover
+      color: $gold
+
+  & h2, h3, h4 ,h5, h6
+    font-size: 20px
+    margin-bottom: 30px
+
+  & p
+    line-height: 1.4
+    margin-bottom: 30px
+
+  & > ol, ul
+    list-style-position: inside
+    margin-bottom: 30px
+
+    & > li
+      line-height: 1.4
+
+  & > blockquote
+    position: relative
+    padding-left: 20px
+    margin-bottom: 30px
+
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      width: 5px
+      height: 100%
+      background-color: $gold
+
+    & > cite
+      font-size: 14px
+      color: $grey50
+
+  & > .wp-block-table
+    margin-bottom: 30px
+
+    @media only screen and (max-width: 767px)
+      overflow-x: scroll
+
+    & > table
+      //border-collapse: collapse
+      border-spacing: 0
+      width: 100%
+      border: solid 1px $grey50
+      border-radius: 5px
+
+      & > *:first-child
+        & tr:first-child
+          background-color: $grey50
+          color: #fff
+
+      & tr
+        &:nth-child(2n+3)
+          background-color: $light
+
+        &:last-child
+          & td
+            border-bottom: 0
+
+        & td
+          border-bottom: solid 1px $grey50
+          border-right: solid 1px $grey50
+
+          &:last-child
+            border-right: 0
+
+      & td,th
+        padding: 6px
+
+    & > figcaption
+      font-size: 14px
+      text-align: center
+      padding-top: 10px
+      padding-bottom: 10px
+
+
+  & > .wp-block-image
+    margin-bottom: 30px
+
+    & > img
+      display: block
+      width: 100%
+      height: auto
+
+    & > figcaption
+      font-size: 14px
+      text-align: center
+      padding-top: 10px
+      padding-bottom: 10px

@@ -80,47 +80,19 @@
 
 
   &__wrapper
-    display: flex
-    flex-wrap: wrap
-    margin-bottom: 20px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: 1fr
+    gap: 20px
 
-    & .allgoods
-      width: 24%
-      margin-right: 1.33%
-      margin-bottom: 20px
+    @media only screen and (max-width: 1199px)
+      grid-template-columns: repeat(3, 1fr)
 
-      &:nth-child(4n+4)
-        margin-right: 0
+    @media only screen and (max-width: 739px)
+      grid-template-columns: repeat(2, 1fr)
 
-      @media only screen and (max-width: 1199px)
-        width: 32%
-        margin-right: 2%
-
-        &:nth-child(4n+4)
-          margin-right: 2%
-
-        &:nth-child(3n+3)
-          margin-right: 0
-
-      @media only screen and (max-width: 899px)
-        width: 48%
-        margin-right: 4%
-
-        &:nth-child(4n+4)
-          margin-right: 0
-
-        &:nth-child(3n+3)
-          margin-right: 4%
-
-        &:nth-child(2n+2)
-          margin-right: 0
-
-      @media only screen and (max-width: 599px)
-        width: 100%
-        margin-right: 0
-
-        &:nth-child(3n+3)
-          margin-right: 0
+    @media only screen and (max-width: 459px)
+      grid-template-columns: 1fr
 
   &__picture
     position: relative
@@ -277,3 +249,4 @@
 
   &__button
     text-align: center
+    margin-top: 30px

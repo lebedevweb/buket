@@ -69,20 +69,27 @@
         font-size: 40px
 
       @media only screen and (max-width: 460px)
-        font-size: 20px
+        font-size: 24px
 
     & > p
       font-size: 24px
-      margin-bottom: 50px
+      display: -webkit-box
+      -webkit-line-clamp: 3
+      -webkit-box-orient: vertical
+      overflow-y: hidden
+      max-height: 90px
       opacity: 0
       transform: translateY(50px)
+      margin-bottom: 50px
 
       @media only screen and (max-width: 1680px)
         font-size: 20px
+        max-height: 75px
         margin-bottom: 45px
 
       @media only screen and (max-width: 1199px)
         font-size: 18px
+        max-height: 65px
 
       @media only screen and (max-width: 767px)
         display: none
@@ -90,6 +97,10 @@
     & > .btn
       opacity: 0
       transform: translateY(50px)
+
+      @media only screen and (max-width: 460px)
+        font-size: 14px
+        padding: 5px 10px
 
   & .swiper-slide.swiper-slide-active,
   & .swiper-slide.swiper-slide-duplicate-active

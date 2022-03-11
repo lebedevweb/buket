@@ -10,7 +10,8 @@ export default function scrolltop() {
 
   function trackScroll(el) {
     const scrolled = window.pageYOffset;
-    const coords = document.documentElement.clientHeight;
+    // const coords = document.documentElement.clientHeight;
+    const coords = 300;
 
     if (scrolled > coords) {
       addClass(el, 'active');

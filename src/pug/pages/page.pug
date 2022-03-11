@@ -1,0 +1,111 @@
+doctype html
+html(lang="ru")
+  include ../common/head
+  body
+    include ../components/navbar
+    include ../components/sidenav
+    div(class="wrapper")
+      header(class="header")
+        div(class="container")
+          include ../components/header/header-top
+          include ../components/header/header-navigation
+          include ../components/bradcrumbs
+
+      div(class="wrapper__content")
+        div(class="container")
+          main(class="page")
+            h1(class="page__title") Заголовок поста или страницы
+            p
+              strong Lorem Ipsum
+              |  — это текст-«рыба», часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронн
+              a(href="http://йцвйцвйцвйцв") ый дизайн. Его
+              |  популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+            h2 Заголовок 2
+            ul
+              li
+                strong Lorem Ipsum
+                |  — это текст-«рыба», часто используемый в печати и вэб-дизайне.
+              li
+                strong Lorem Ipsum
+                |  — это текст-«рыба», часто используемый в печати и вэб-дизайне.
+              li
+                strong Lorem Ipsum
+                |  — это текст-«рыба», часто
+                a(href="http://йцвйцвйцвйцв") используемый
+                |  в печати и вэб-дизайне.
+              li
+                strong Lorem Ipsum
+                |  — это текст-«рыба», часто используемый в печати и вэб-дизайне.
+
+            h3 Заголовок 3
+
+            ol
+              li
+                strong Lorem Ipsum
+                |  — это текст-«рыба», часто используемый в печати и вэб-дизайне.
+              li
+                strong Lorem Ipsum
+                |  — это текст-«рыба», часто используемый в печати и вэб-дизайне.
+              li
+                strong Lorem Ipsum
+                |  — это текст-«рыба», часто
+                a(href="http://йцвйцвйцвйцв") используемый
+                |  в печати и вэб-дизайне.
+              li
+                strong Lorem Ipsum
+                |  — это текст-«рыба», часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+
+            blockquote(class="wp-block-quote")
+              p
+                strong Lorem Ipsum
+                |  — это текст-«рыба», часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+              cite Lorem Ipsum— это текст-«рыба», лофывфыфывфыв
+
+            figure(class="wp-block-table")
+              table
+                thead
+                  tr
+                    th Заголовок 1
+                    th Заголовок 2
+                    th Заголовок 3
+                    th Заголовок 4
+
+                tbody
+                  tr
+                    td Тело таблицы 1
+                    td Тело таблицы 1
+                    td Тело таблицы 1
+                    td Тело таблицы 1
+                  tr
+                    td Тело таблицы 2
+                    td Тело таблицы 2
+                    td Тело таблицы 2
+                    td Тело таблицы 2
+                  tr
+                    td Тело таблицы 3
+                    td Тело таблицы 3
+                    td Тело таблицы 3
+                    td Тело таблицы 3
+
+
+              figcaption Подпись к таблице
+
+            figure(class="wp-block-image size-large")
+              img(src="./img/productslider/01.webp" alt="" class="wp-image-84" width="1024" height="1024")
+              figcaption Подпись к изображению
+
+
+        include ../components/photoslider
+        include ../components/hotproduct
+        include ../components/cheap-product
+
+      include ../components/special
+
+
+
+      include ../components/footer
+    include ../components/scrolltop
+    include ../components/popup
+
+    script(src="./js/main.js" async)
+
