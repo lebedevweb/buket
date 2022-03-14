@@ -6,10 +6,10 @@ div(class="popup__container")
         path(d="M15.75,14.57a.83.83,0,0,1,0,1.18.85.85,0,0,1-.59.25.83.83,0,0,1-.59-.25L12,13.18,9.43,15.75a.83.83,0,0,1-.59.25.85.85,0,0,1-.59-.25.83.83,0,0,1,0-1.18L10.82,12,8.25,9.43A.83.83,0,0,1,9.43,8.25L12,10.82l2.57-2.57a.83.83,0,0,1,1.18,1.18L13.18,12Zm8.25.78V8.65C24,2.59,21.41,0,15.35,0H8.65C2.59,0,0,2.59,0,8.65v6.7C0,21.41,2.59,24,8.65,24h6.7C21.41,24,24,21.41,24,15.35ZM15.35,1.67c5.15,0,7,1.83,7,7v6.7c0,5.15-1.83,7-7,7H8.65c-5.15,0-7-1.83-7-7V8.65c0-5.15,1.83-7,7-7Z")
     div(class="popup__content")
       form(class="popup__form" method="POST" enctype="multipart/form-data")
+        p(class="popup__form__result")
         input(name="phone" type="tel" minlength="10" maxlength="12" placeholder="Телефон *" inputmode="tel" title="+79991234567" required="")
         input(name="name" type="text" placeholder="Ваше имя *" minlength="2" maxlength="20" title="Минимум 2 символа" required="")
         input(name="theme" type="hidden" value="Заявка с сайта")
         div(class="popup__form__submit")
           button(class="btn btn__outline" type="submit") Отправить
-          p(class="popup__form__result")
         p(class="popup__form__description") * Поля обязательны для заполнения.

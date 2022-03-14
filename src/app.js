@@ -8,6 +8,7 @@ import deliveryDate from './js/deliveryDate/deliveryDate';
 import productDescription from './js/productDescription/productDescription';
 import loginTabs from './js/loginTabs/loginTabs';
 import addClassWoocommerce from './js/addClassWoocommerce/addClassWoocommerce';
+import telegram from './js/telegram/telegram';
 
 pushHeaderNav();
 nolink();
@@ -19,3 +20,4 @@ deliveryDate();
 productDescription();
 loginTabs();
 addClassWoocommerce();
+telegram();
