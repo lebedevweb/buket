@@ -1,0 +1,46 @@
+.woocommerce
+  padding-bottom: 50px
+
+  &-cart-form
+    & .product-thumbnail > a
+      display: block
+      max-width: 60px
+
+      & > img
+        display: block
+        width: 100%
+        height: auto
+
+  &-shipping
+    &-calculator
+      & > a
+        color: $green
+
+
+
+    & .product-name
+      & > a
+        color: $green
+
+    & .coupon
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 10px
+
+      &::after,
+      &::before
+        order: 1
+
+      & > input,
+      & > button
+        width: 100%!important
+        display: block
+
+      & > input
+        padding: 10px
+
+
+
+#ship-to-different-address input:checked ~ .shipping_address
+  display: none
+

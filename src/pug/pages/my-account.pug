@@ -1,0 +1,62 @@
+doctype html
+html(lang="ru")
+  include ../common/head
+  body
+    include ../components/navbar
+    include ../components/sidenav
+    div(class="wrapper")
+      header(class="header")
+        div(class="container")
+          include ../components/header/header-top
+          include ../components/header/header-navigation
+          include ../components/bradcrumbs
+
+      div(class="wrapper__content")
+        div(class="container")
+          h1(class="page__title") Мой аккаунт
+          main(class="page__dashboard")
+            nav(class="woocommerce-MyAccount-navigation")
+              ul
+                li(class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard is-active")
+                  a(href="#0") Панель управления
+                li(class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders")
+                  a(href="#0") Заказы
+                li(class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads")
+                  a(href="#0") Загрузки
+                li(class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address")
+                  a(href="#0") Адрес
+                li(class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account")
+                  a(href="#0") Детали профиля
+                li(class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout")
+                  a(href="#0") Выйти
+            div(class="woocommerce-MyAccount-content")
+              div(class="woocommerce-notices-wrapper")
+              p
+                | Добро пожаловать,
+                strong admin
+                | (не
+                strong admin
+                | ?
+                a(href="https://buket.lebedev-web.ru/my-account/customer-logout/?_wpnonce=21e95de1d5") Выйти
+                | )
+              p
+                | Из главной страницы аккаунта вы можете посмотреть ваши
+                a(href="https://buket.lebedev-web.ru/my-account/orders/") недавние заказы
+                | , настроить
+                a(href="https://buket.lebedev-web.ru/my-account/edit-address/") платежный адрес и адрес доставки
+                | , а также
+                a(href="https://buket.lebedev-web.ru/my-account/edit-account/") изменить пароль и основную информацию
+                | .
+
+
+
+      include ../components/special
+
+
+
+      include ../components/footer
+    include ../components/scrolltop
+    include ../components/popup
+
+    script(src="./js/main.js" async)
+
