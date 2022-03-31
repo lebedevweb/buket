@@ -91,8 +91,8 @@
     @media only screen and (max-width: 739px)
       grid-template-columns: repeat(2, 1fr)
 
-    @media only screen and (max-width: 459px)
-      grid-template-columns: 1fr
+    //@media only screen and (max-width: 459px)
+    //  grid-template-columns: 1fr
 
   &__picture
     position: relative
@@ -212,10 +212,15 @@
       border: 0
 
   &__footer
-    display: flex
+    display: grid
     justify-content: space-between
     align-items: center
+    gap: 20px
+    grid-template-columns: repeat(2, 1fr)
     padding: 12px 20px 20px 20px
+
+    @media only screen and (max-width: 767px)
+      grid-template-columns: repeat(1, 1fr)
 
 
   &__price
