@@ -19,39 +19,59 @@ html(lang="ru")
             article(class="product__content")
               h1(class="product__title") Название товара
 
-              section(class="product__number")
-                h2 Артикул:
-                p 23423
+              form(class="variations_form cart")
+                section(class="variations product__variations" cellspacing="0")
+                  h2(class="label")
+                    label(for="pa_size") Размер
 
-              div(class="product__price__single")
-                p(class="price")
-                  del(aria-hidden="true")
-                    span(class="woocommerce-Price-amount amount")
-                      bdi 6 666&nbsp
-                        span(class="woocommerce-Price-currencySymbol") ₽
-                  ins
-                    span(class="woocommerce-Price-amount amount")
-                      bdi 5 890&nbsp
-                        span(class="woocommerce-Price-currencySymbol") ₽
-                  span(class="woocommerce-Price-amount amount")
-                    bdi 5 890&nbsp
-                      span(class="woocommerce-Price-currencySymbol") ₽
+                  select(id="pa_size" class="product__select" name="attribute_pa_size" data-attribute_name="attribute_pa_size" data-show_option_none="yes")
+                    option(value="") Выбрать опцию
+                    option(value="m" selected="selected" class="attached enabled") M
+                    option(value="l" class="attached enabled") L
+                    option(value="xl" class="attached enabled") XL
+
+                  a(class="reset_variations product__reset" href="#")
+
+                div(class="single_variation_wrap")
+                  div(class="woocommerce-variation single_variation")
+                    div(class="product__price__variative")
+                      p(class="price")
+                        del(aria-hidden="true")
+                          span(class="woocommerce-Price-amount amount")
+                            bdi 6 666&nbsp
+                              span(class="woocommerce-Price-currencySymbol") ₽
+                        ins
+                          span(class="woocommerce-Price-amount amount")
+                            bdi 5 890&nbsp
+                              span(class="woocommerce-Price-currencySymbol") ₽
+                        span(class="woocommerce-Price-amount amount")
+                          bdi 5 890&nbsp
+                            span(class="woocommerce-Price-currencySymbol") ₽
+
+
+                  section(class="product__number")
+                    h2 Артикул:
+                    p 23423
+
+                  section(class="product__size")
+                    h2 Д/Ш/В(см):
+                    p 12/34/23
+
+                  section(class="product__weight")
+                    h2 Вес:
+                    p 1,2
+
+                  section(class="product__time")
+                    h2 Доставим:
+
+                  section(class="product__structure")
+                    h2 Состав:
+                    p Подарочный ящик, багет, сыр "Camambert", сыр "Косичка" - 2 шт., сыр "Чечил", грудинка, охотничьи колбаски, колбаски "Пивчики", томаты "Черри", перец "Чили", зелень, элементы декора.
+
+
+
+
                 a(class="btn btn__gold" href="#0") Купить
-
-              section(class="product__time")
-                h2 Доставим:
-
-              section(class="product__structure")
-                h2 Состав:
-                p Подарочный ящик, багет, сыр "Camambert", сыр "Косичка" - 2 шт., сыр "Чечил", грудинка, охотничьи колбаски, колбаски "Пивчики", томаты "Черри", перец "Чили", зелень, элементы декора.
-
-              section(class="product__size")
-                h2 Д/Ш/В(см):
-                p 12/34/23
-
-              section(class="product__weight")
-                h2 Вес:
-                p 1,2
 
               section(class="product__category")
                 h2 Категория:
