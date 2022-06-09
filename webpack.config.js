@@ -93,7 +93,7 @@ module.exports = {
   devServer: {
     open: {
       app: {
-        name: 'firefox-developer-edition',
+        name: 'firefox',
       },
     },
     port: 9000,
